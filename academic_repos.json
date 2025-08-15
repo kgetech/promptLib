@@ -1,0 +1,122 @@
+{
+  "Open Source Chat and Agent Frameworks": [
+    {
+      "name": "Rasa",
+      "url": "https://github.com/RasaHQ/rasa",
+      "license": "Apache‑2.0",
+      "description": "Rasa is an open‑source machine learning framework for automating text‑ and voice‑based conversations.  The Rasa GitHub repository notes that the project is open source and licensed under Apache‑2.0【289169209398362†L146-L154】, making it suitable for integration into agentified chat systems.",
+      "citations": ["289169209398362†L146-L154"]
+    },
+    {
+      "name": "Botpress",
+      "url": "https://github.com/botpress/botpress",
+      "license": "MIT",
+      "description": "Botpress is a conversational AI platform whose documentation emphasises that it is open source and MIT‑licensed; its source code is available on GitHub【676044645045107†L292-L295】【19066190007606†L90-L94】.  The MIT license permits integration with MIT‑licensed projects.",
+      "citations": ["676044645045107†L292-L295", "19066190007606†L90-L94"]
+    },
+    {
+      "name": "LobeChat",
+      "url": "https://github.com/lobehub/lobechat",
+      "license": "Apache‑2.0",
+      "description": "LobeChat is an open‑source chat client that recently transitioned from the MIT license to the Apache License 2.0.  A LobeHub blog post explains that the change provides patent protection, clarifies contributor responsibilities and encourages commercial use【111405855356569†L34-L60】.",
+      "citations": ["111405855356569†L34-L60"]
+    },
+    {
+      "name": "LangChain",
+      "url": "https://github.com/langchain-ai/langchain",
+      "license": "MIT",
+      "description": "LangChain is an MIT‑licensed open‑source library for building applications using large‑language models.  The FAQ on the LangChain website states that LangChain is free to use and MIT‑licensed【87703205820586†L124-L131】, making it compatible with MIT‑licensed downstream projects.",
+      "citations": ["87703205820586†L124-L131"]
+    },
+    {
+      "name": "LlamaIndex (formerly GPT‑Index)",
+      "url": "https://github.com/emptycrown/llama_index",
+      "license": "MIT",
+      "description": "LlamaIndex (also called GPT‑Index) is a data framework that helps build LLM‑powered applications.  The project documentation notes that full‑stack applications built by the team are open‑sourced under the MIT license【50648180755496†L1569-L1571】, and the repository’s LICENSE file contains the standard MIT license text【81950242511812†L0-L14】.",
+      "citations": ["50648180755496†L1569-L1571", "81950242511812†L0-L14"]
+    },
+    {
+      "name": "AutoGen",
+      "url": "https://github.com/microsoft/autogen",
+      "license": "MIT",
+      "description": "AutoGen is a framework from Microsoft for building multi‑agent systems.  A project blog post clarifies that despite confusion around forks, development continues under the MIT license and contributions are welcome【236305777374353†L88-L94】.",
+      "citations": ["236305777374353†L88-L94"]
+    }
+  ],
+  "Open Access & Preprint Repositories": [
+    {
+      "name": "arXiv",
+      "url": "https://arxiv.org/",
+      "license": "Open Access (non‑peer reviewed)",
+      "description": "arXiv is a free distribution service and open‑access archive for scholarly articles across physics, mathematics, computer science and other fields.  The service notes that it is free and open and that materials are not peer‑reviewed by arXiv【851594936166046†L36-L40】.  It provides openly accessible papers that can be cited by agent systems.",
+      "citations": ["851594936166046†L36-L40"]
+    },
+    {
+      "name": "Directory of Open Access Journals (DOAJ)",
+      "url": "https://doaj.org/",
+      "license": "Open Access (varies per journal)",
+      "description": "DOAJ indexes and provides access to high‑quality, peer‑reviewed open‑access journals across many fields.  The Rutgers University Libraries page explains that DOAJ contains more than 21,000 journals and that journals must meet quality standards for open access, licensing and peer review【139677267372934†L68-L74】.",
+      "citations": ["139677267372934†L68-L74"]
+    },
+    {
+      "name": "IEEE Open (including IEEE Access, TechRxiv and DataPort)",
+      "url": "https://open.ieee.org/",
+      "license": "Varies; IEEE Access uses CC BY; TechRxiv uses CC BY licences; IEEE DataPort datasets use CC‑BY",
+      "description": "The IEEE open‑access program provides authors with options to publish in fully open access journals such as IEEE Access or hybrid journals.  The program emphasises that open access allows authors to publish in high‑quality, peer‑reviewed journals while complying with open science policies【382976212154936†L41-L69】.  IEEE also operates platforms like TechRxiv—a free preprint server—and IEEE DataPort for sharing datasets【382976212154936†L95-L115】.",
+      "citations": ["382976212154936†L41-L69", "382976212154936†L95-L115"]
+    },
+    {
+      "name": "Zenodo",
+      "url": "https://zenodo.org/",
+      "license": "CC0 metadata; content licences vary (often CC‑BY)",
+      "description": "Zenodo is an open science repository built by CERN and OpenAIRE.  Its about page notes that Zenodo was launched to provide a catch‑all repository for European Commission‑funded research and that it makes sharing, curation and publication of data and software a reality for all researchers【930696613976271†L24-L49】.  To eliminate barriers, Zenodo does not impose requirements on format, size, access restrictions or licence【930696613976271†L57-L60】.  The site also emphasises that its code and metadata are open source and openly licensed【930696613976271†L106-L114】.",
+      "citations": ["930696613976271†L24-L49", "930696613976271†L57-L60", "930696613976271†L106-L114"]
+    }
+  ],
+  "Data and Dataset Repositories": [
+    {
+      "name": "Data.gov",
+      "url": "https://data.gov/",
+      "license": "Varies by dataset (U.S. government open data)",
+      "description": "Data.gov is the U.S. government’s open data site.  The home page states that Data.gov is ‘the home of the U.S. government’s open data’ and provides datasets, tools and resources to enable research, application development and data visualisation【988225585670636†L34-L56】.  The mission emphasises unleashing the power of government open data to inform decisions, drive innovation and strengthen open government【988225585670636†L52-L70】.",
+      "citations": ["988225585670636†L34-L56", "988225585670636†L52-L70"]
+    },
+    {
+      "name": "Registry of Open Data on AWS (RODA)",
+      "url": "https://registry.opendata.aws/",
+      "license": "Varies by dataset (check dataset licence)",
+      "description": "RODA helps people discover and share datasets stored on Amazon Web Services.  The registry’s about section notes that it exists to help people discover and share datasets available via AWS resources【719075226752426†L18-L33】.  The page cautions that datasets are maintained by various third parties and that users should check dataset licences to determine whether a dataset may be used【719075226752426†L47-L52】.",
+      "citations": ["719075226752426†L18-L33", "719075226752426†L47-L52"]
+    },
+    {
+      "name": "Awesome Public Datasets",
+      "url": "https://github.com/awesomedata/awesome-public-datasets",
+      "license": "MIT",
+      "description": "Awesome Public Datasets is a community‑curated list of high‑quality public datasets.  The project’s README notes that it is a list of topic‑centric public data sources and that most of the datasets listed are free【941019207231244†L8-L18】.  The repository is licensed under the MIT licence (MIT licence file in the repo), making it compatible with MIT‑licensed projects.",
+      "citations": ["941019207231244†L8-L18"]
+    },
+    {
+      "name": "Hugging Face Datasets",
+      "url": "https://huggingface.co/docs/datasets",
+      "license": "Apache 2.0 (library); dataset licences vary",
+      "description": "Hugging Face’s Datasets library provides a way to access and share AI datasets for audio, computer‑vision and natural‑language tasks.  The documentation notes that Datasets allows users to load a dataset in a single line of code and uses Apache Arrow to process large datasets efficiently.  It also emphasises deep integration with the Hugging Face Hub, enabling easy sharing with the wider machine‑learning community【50033669099823†L112-L121】.",
+      "citations": ["50033669099823†L112-L121"]
+    },
+    {
+      "name": "IEEE DataPort",
+      "url": "https://ieee-dataport.org/",
+      "license": "CC‑BY for open datasets (subscription required for some datasets)",
+      "description": "IEEE DataPort is a research data platform where researchers can upload standard and open‑access datasets.  According to Harvard’s research data management guide, IEEE DataPort allows researchers, engineers and scientists to upload datasets up to 2 TB (or 10 TB for institutional subscribers); uploaded datasets are accessible and include metadata and supporting documentation to aid understanding【790141646021024†L181-L188】.  Datasets on IEEE DataPort are made available under Creative Commons Attribution licences that require attribution【790141646021024†L219-L225】.",
+      "citations": ["790141646021024†L181-L188", "790141646021024†L219-L225"]
+    }
+  ],
+  "Community and Knowledge Resources": [
+    {
+      "name": "GeeksforGeeks Open‑Source Articles",
+      "url": "https://www.geeksforgeeks.org/software-engineering/introduction-to-open-source-and-its-benefits/",
+      "license": "Open Access (Creative Commons BY‑NC‑SA)",
+      "description": "GeeksforGeeks is a community‑driven platform offering tutorials and articles on programming and computer science topics.  Its article ‘Introduction to Open‑Source and its Benefits’ explains that open‑source software is released under licences allowing users to study, modify and improve the source code and highlights the collaborative nature of open‑source projects【202915519513714†L84-L104】.  Such community‑vetted resources can complement formal research when building agentified systems.",
+      "citations": ["202915519513714†L84-L104"]
+    }
+  ]
+}
