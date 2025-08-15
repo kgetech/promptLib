@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "license": "MIT",
+    "license_url": "https://opensource.org/licenses/MIT",
+    "copyright": "Copyright (c) 2024 promptLib contributors"
+  },
   "Open Source Chat and Agent Frameworks": [
     {
       "name": "Rasa",

@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "license": "MIT",
+    "license_url": "https://opensource.org/licenses/MIT",
+    "copyright": "Copyright (c) 2024 promptLib contributors",
+    "description": "Common variables and placeholders for prompt templates."
+  },
+  "variables": [
+    {"name": "USER_NAME", "default": "User", "description": "Placeholder for the end user's name."},
+    {"name": "TASK_DESCRIPTION", "default": "", "description": "Description of the current task to perform."}
+  ]
+}
