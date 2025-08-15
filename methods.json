@@ -20,6 +20,124 @@
         "Solve each subgoal",
         "Combine the results"
       ]
+    },
+	{
+      "name": "expand",
+      "aliases": ["{expand}", "expand_on", "deep_expand"],
+      "version": "1.0.0",
+      "summary": "Expand a summarized topic into a deeper, forward-advancing exposition that surfaces implications, fills knowledge gaps, proposes next steps, and tailors the output to any specifics provided with the request.",
+      "intended_use": [
+        "When the user supplies a brief summary or bullet points and wants a richer, actionable expansion.",
+        "When a research agent should push beyond recap to generate new lines of inquiry, hypotheses, and implementation plans."
+      ],
+      "inputs": {
+        "topic_summary": "string | required – the brief source summary or bullets to expand.",
+        "specifics": "object | optional – constraints/targets such as domain, audience, tone, depth, timeframe, format, length.",
+        "known_gaps": "array<string> | optional – issues the user suspects are missing or underdeveloped.",
+        "evidence_prefs": "object | optional – citation style, need for quotes, preference for standards/docs over blogs, etc.",
+        "avoid": "array<string> | optional – items to de-emphasize (e.g., certain frameworks, geographies)."
+      },
+      "controls": {
+        "depth": { "enum": ["overview", "practitioner", "expert"], "default": "practitioner" },
+        "stance": { "enum": ["neutral", "critical", "optimistic", "balanced"], "default": "balanced" },
+        "output_mode": { "enum": ["report", "roadmap", "design_spec", "FAQ", "teaching_notes"], "default": "report" },
+        "length": { "enum": ["short", "medium", "long"], "default": "medium" }
+      },
+      "safety_ethics": {
+        "bias_checks": true,
+        "privacy_checks": true,
+        "ip_checks": true,
+        "disclaimer_when_uncertain": true
+      },
+      "success_criteria": [
+        "Goes beyond summary: adds implications, trade-offs, and next steps.",
+        "Addresses user-provided specifics faithfully (audience, format, constraints).",
+        "Separates facts from inference; cites where appropriate.",
+        "Identifies at least 3 concrete avenues to advance the work (experiments, designs, data to collect).",
+        "States assumptions and known unknowns."
+      ],
+      "prompt": {
+        "template": [
+          "ROLE: Senior analyst & writer.",
+          "TASK: Expand the provided summary into a deeper, action-oriented output tailored to the specifics.",
+          "CONTEXT:",
+          "- Topic Summary:\n{topic_summary}",
+          "- User Specifics (constraints, audience, domain, goals):\n{specifics}",
+          "- Known Gaps:\n{known_gaps}",
+          "- Evidence/Citation Preferences:\n{evidence_prefs}",
+          "- Avoid/De-emphasize:\n{avoid}",
+          "",
+          "INSTRUCTIONS:",
+          "1) Map the space: briefly restate the core problem in your own words; list key sub-topics and overlooked angles.",
+          "2) Advance knowledge: add insights that extend the summary—implications, edge cases, counter-examples, comparatives.",
+          "3) Fill gaps: answer or scope the known gaps. If unknown, propose how to find out (data, experiments, stakeholders).",
+          "4) Propose next actions: provide a prioritized roadmap (quick wins, short-term, long-term). Include owners and effort.",
+          "5) Risks & ethics: name risks, biases, safety/privacy concerns; suggest mitigations.",
+          "6) Evidence: separate facts vs. inferences. Cite high-quality sources when facts are asserted.",
+          "7) Output to requested mode, tone, audience, and length.",
+          "",
+          "OUTPUT FORMAT (strict):",
+          "# Title",
+          "## Executive Summary (3–6 bullets)",
+          "## What’s New Beyond the Summary",
+          "## Gap Analysis & How to Close It",
+          "## Action Roadmap (prioritized; with Who/What/When/Risk)",
+          "## Risks, Ethics, Compliance",
+          "## References (if facts asserted; follow {evidence_prefs.citation_style} if provided)",
+          "",
+          "CONSTRAINTS:",
+          "- Be specific and non-generic; quantify when reasonable.",
+          "- Do not invent citations; mark any claims lacking sources as [uncited].",
+          "- Keep chain-of-thought private; show results only."
+        ],
+        "placeholders": [
+          "topic_summary",
+          "specifics",
+          "known_gaps",
+          "evidence_prefs",
+          "avoid"
+        ]
+      },
+      "few_shot": [
+        {
+          "user": {
+            "topic_summary": "Short note on using LoRA adapters to fine-tune an LLM for legal contract clause extraction.",
+            "specifics": {
+              "audience": "ML engineers at a legaltech startup",
+              "output_mode": "roadmap",
+              "depth": "expert",
+              "length": "medium",
+              "goals": ["higher F1 on indemnification clauses", "on-prem deployment"],
+              "constraints": ["PII must not leave VPC", "budget $3k/mo inferencing"]
+            },
+            "known_gaps": ["Latency under 100ms", "Clause boundary errors"],
+            "evidence_prefs": { "citation_style": "IEEE", "prefer": ["peer-reviewed", "vendor docs"] },
+            "avoid": ["general primer on transformers"]
+          },
+          "assistant_outline": [
+            "Executive summary with target metrics and risks.",
+            "What’s new: compare LoRA vs. QLoRA trade-offs for legal text; schema-aware decoding.",
+            "Gap closure: latency via compiled runtimes and batching; boundary errors via span-level labeling.",
+            "Roadmap: pilot → A/B → red-team; owners & effort; budget roll-up.",
+            "Risks: PII leakage, bias; mitigations.",
+            "References: vendor/runtime docs + peer-reviewed sources."
+          ]
+        }
+      ],
+      "postprocessing": {
+        "validate_json_sections": false,
+        "checklists": [
+          "Did we add at least 3 advancing insights?",
+          "Are actions prioritized with owners and effort?",
+          "Are assumptions and unknowns explicit?"
+        ]
+      },
+      "metadata": {
+        "author": "promptLib contributors",
+        "license": "MIT",
+        "created": "2025-08-15",
+        "updated": "2025-08-15"
+      }
     }
   ]
 }
