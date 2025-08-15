@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "license": "MIT",
+    "license_url": "https://opensource.org/licenses/MIT",
+    "copyright": "Copyright (c) 2024 promptLib contributors",
+    "description": "Reusable helper functions for language model prompts."
+  },
+  "functions": [
+    {
+      "name": "generate_outline",
+      "description": "Create a bullet-point outline for a given topic.",
+      "parameters": {"topic": "string"},
+      "pseudocode": [
+        "def generate_outline(topic):",
+        "    # list key points about topic",
+        "    return outline"
+      ]
+    },
+    {
+      "name": "summarize_text",
+      "description": "Summarize text into a set number of sentences.",
+      "parameters": {"text": "string", "sentences": "int"},
+      "pseudocode": [
+        "def summarize_text(text, sentences):",
+        "    # compress text into the requested number of sentences",
+        "    return summary"
+      ]
+    }
+  ]
+}

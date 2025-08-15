@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "license": "MIT",
+    "license_url": "https://opensource.org/licenses/MIT",
+    "copyright": "Copyright (c) 2024 promptLib contributors",
+    "description": "Prompting methods and strategies."
+  },
+  "methods": [
+    {
+      "name": "chain_of_thought",
+      "description": "Encourages the model to reason through problems step by step.",
+      "template": "Let's think step by step."
+    },
+    {
+      "name": "decompose_problem",
+      "description": "Break a complex task into manageable sub-tasks.",
+      "steps": [
+        "Identify the overall goal",
+        "List required subgoals",
+        "Solve each subgoal",
+        "Combine the results"
+      ]
+    }
+  ]
+}

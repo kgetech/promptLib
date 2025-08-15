@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "license": "MIT",
+    "license_url": "https://opensource.org/licenses/MIT",
+    "copyright": "Copyright (c) 2024 promptLib contributors",
+    "description": "Small pseudocode snippets for common tasks."
+  },
+  "snippets": [
+    {
+      "name": "iterate_with_index",
+      "description": "Loop over items while tracking their index.",
+      "code": [
+        "for i, item in enumerate(items):",
+        "    # process item"
+      ]
+    },
+    {
+      "name": "read_file",
+      "description": "Read a text file and return its contents.",
+      "code": [
+        "def read_file(path):",
+        "    with open(path) as f:",
+        "        return f.read()"
+      ]
+    }
+  ]
+}
